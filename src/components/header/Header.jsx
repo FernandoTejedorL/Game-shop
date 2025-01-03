@@ -1,10 +1,11 @@
-import { NavLink } from 'react-router-dom';
 import {
+	StyledCounter,
 	StyledCross,
 	StyledHamburger,
 	StyledHeader,
 	StyledIcons,
 	StyledNav,
+	StyledNavLink,
 	StyledUl
 } from './header.styles';
 import { useState } from 'react';
@@ -41,11 +42,12 @@ const Header = () => {
 			</StyledIcons>
 			<StyledNav $show={showMenu}>
 				<StyledUl>
-					<NavLink to={'/'}>Home</NavLink>
-					<NavLink to={'/gamestore'}>Game Store</NavLink>
-					<NavLink to={'/checkout'}>Checkout</NavLink>
+					<StyledNavLink to={'/'}>Home</StyledNavLink>
+					<StyledNavLink to={'/gamestore'}>Game Store</StyledNavLink>
+					<StyledNavLink to={'/checkout'}>Checkout</StyledNavLink>
 				</StyledUl>
 			</StyledNav>
+			<StyledCounter $show={showMenu}>0</StyledCounter>
 		</StyledHeader>
 	);
 };

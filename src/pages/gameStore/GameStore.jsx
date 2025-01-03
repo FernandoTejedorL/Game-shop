@@ -1,14 +1,28 @@
+import Game from '../../components/game/Game';
+import PlattformsFilter from '../../components/plattformsFilter/PlattformsFilter';
+import { GAMES_INFO } from '../../constants/games-info';
+import {
+	StyledGamestoreMain,
+	StyledHeader,
+	StyledSearch,
+	StyledTextInput
+} from './gamestore.styles';
+
 const GameStore = () => {
 	return (
-		<>
-			<h1>GameStore</h1>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas rem
-				dolorum quasi, voluptate adipisci aperiam, provident amet molestiae
-				molestias sint sit, eveniet illum dolores neque porro dignissimos quia
-				distinctio! Tempore?
-			</p>
-		</>
+		<StyledGamestoreMain>
+			<StyledHeader>Game Store</StyledHeader>
+			<StyledSearch>
+				<img src='/assets/images/search.svg' alt='' />
+				<StyledTextInput type='text' placeholder='Search your game...' />
+			</StyledSearch>
+			<PlattformsFilter />
+			<div>
+				{GAMES_INFO.map(game => (
+					<Game key={game.id} {...game} />
+				))}
+			</div>
+		</StyledGamestoreMain>
 	);
 };
 export default GameStore;
