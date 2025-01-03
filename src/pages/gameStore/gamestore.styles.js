@@ -37,4 +37,16 @@ const StyledTextInput = styled.input`
 	font-weight: ${FONT_WEIGHT.bold};
 `;
 
-export { StyledGamestoreMain, StyledHeader, StyledSearch, StyledTextInput };
+const StyledGamesContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+`;
+
+export {
+	StyledGamestoreMain,
+	StyledHeader,
+	StyledSearch,
+	StyledTextInput,
+	StyledGamesContainer
+};

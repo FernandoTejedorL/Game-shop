@@ -1,6 +1,7 @@
 export const FONT_SIZE = {
 	xl: '2rem',
 	l: '1.5rem',
+	ml: '1.125rem',
 	m: '1rem',
 	s: '0.875rem'
 };

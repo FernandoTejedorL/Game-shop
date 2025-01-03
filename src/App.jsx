@@ -1,17 +1,17 @@
 import { BrowserRouter } from 'react-router-dom';
 import Router from './router/Router';
 import { GlobalStyles } from './styles/GlobalStyles';
-import CounterProvider from './providers/CounterProvider';
+import CartProvider from './providers/CartProvider';
 
 const App = () => {
 	return (
 		<>
 			<GlobalStyles />
-			<CounterProvider>
+			<CartProvider>
 				<BrowserRouter>
 					<Router />
 				</BrowserRouter>
-			</CounterProvider>
+			</CartProvider>
 		</>
 	);
 };

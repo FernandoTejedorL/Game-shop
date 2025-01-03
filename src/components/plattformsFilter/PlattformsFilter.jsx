@@ -9,6 +9,7 @@ import {
 
 const PlattformsFilter = () => {
 	const [plattHidder, setPlattHidder] = useState(true);
+
 	return (
 		<StyledPlattformsSelectorDiv>
 			<StyledPlatSelDiv>
@@ -21,9 +22,9 @@ const PlattformsFilter = () => {
 				/>
 			</StyledPlatSelDiv>
 			<StyledPlattSelector $plattHidder={plattHidder}>
-				<Checkbox plattform={'PC'} />
-				<Checkbox plattform={'Play Station 5'} />
-				<Checkbox plattform={'Play Station 4'} />
+				<Checkbox filter={'PC'} plattform={'PC'} />
+				<Checkbox filter={'PS4'} plattform={'Play Station 5'} />
+				<Checkbox filter={'PS5'} plattform={'Play Station 4'} />
 			</StyledPlattSelector>
 		</StyledPlattformsSelectorDiv>
 	);

@@ -1,3 +1,4 @@
+import { CartContext } from '../../contexts/CartContext';
 import {
 	StyledCounter,
 	StyledCross,
@@ -8,10 +9,11 @@ import {
 	StyledNavLink,
 	StyledUl
 } from './header.styles';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 
 const Header = () => {
 	const [showMenu, setShowMenu] = useState(false);
+	const { cart } = useContext(CartContext);
 
 	return (
 		<StyledHeader>
@@ -47,7 +49,7 @@ const Header = () => {
 					<StyledNavLink to={'/checkout'}>Checkout</StyledNavLink>
 				</StyledUl>
 			</StyledNav>
-			<StyledCounter $show={showMenu}>0</StyledCounter>
+			<StyledCounter $show={showMenu}>{cart.length}</StyledCounter>
 		</StyledHeader>
 	);
 };
