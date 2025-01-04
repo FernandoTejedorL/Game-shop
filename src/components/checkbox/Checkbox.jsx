@@ -1,14 +1,14 @@
 import { StyledCheckbox, StyledCheckboxContainer } from './checkbox.styles';
 
-const Checkbox = ({ plattform, action }) => {
+const Checkbox = ({ text, filterGames, filter }) => {
 	return (
 		<StyledCheckboxContainer>
 			<StyledCheckbox
 				type='checkbox'
-				id={plattform}
-				onChange={() => action()}
+				id={filter}
+				onChange={() => filterGames(filter)}
 			/>
-			<label htmlFor={plattform}>{plattform}</label>
+			<label htmlFor={filter}>{text}</label>
 		</StyledCheckboxContainer>
 	);
 };

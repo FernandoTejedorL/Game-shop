@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import Game from '../../components/game/Game';
 import PlattformsFilter from '../../components/plattformsFilter/PlattformsFilter';
-import { GAMES_INFO } from '../../constants/games-info';
 import {
 	StyledGamesContainer,
 	StyledGamestoreMain,
@@ -12,7 +11,8 @@ import {
 import { CartContext } from '../../contexts/CartContext';
 
 const GameStore = () => {
-	const { addToCart, cart, deleteFromCart } = useContext(CartContext);
+	const { addToCart, cart, deleteFromCart, filteredGames } =
+		useContext(CartContext);
 	return (
 		<StyledGamestoreMain>
 			<StyledHeader>Game Store</StyledHeader>
@@ -22,7 +22,7 @@ const GameStore = () => {
 			</StyledSearch>
 			<PlattformsFilter />
 			<StyledGamesContainer>
-				{GAMES_INFO.map(game => (
+				{filteredGames.map(game => (
 					<Game
 						key={game.id}
 						{...game}

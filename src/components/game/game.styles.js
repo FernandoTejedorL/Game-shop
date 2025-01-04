@@ -35,6 +35,7 @@ const StyledBuyButton = styled.button`
 `;
 
 const StyledInCartButton = styled.div`
+	height: 2.5rem;
 	display: flex;
 	justify-content: space-between;
 `;

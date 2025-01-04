@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import Checkbox from '../checkbox/Checkbox';
 import {
 	StyledChevron,
@@ -6,8 +6,10 @@ import {
 	StyledPlattformsSelectorDiv,
 	StyledPlattSelector
 } from './plattformsFilter.styles';
+import { CartContext } from '../../contexts/CartContext';
 
 const PlattformsFilter = () => {
+	const { filterGames } = useContext(CartContext);
 	const [plattHidder, setPlattHidder] = useState(true);
 
 	return (
@@ -22,9 +24,17 @@ const PlattformsFilter = () => {
 				/>
 			</StyledPlatSelDiv>
 			<StyledPlattSelector $plattHidder={plattHidder}>
-				<Checkbox filter={'PC'} plattform={'PC'} />
-				<Checkbox filter={'PS4'} plattform={'Play Station 5'} />
-				<Checkbox filter={'PS5'} plattform={'Play Station 4'} />
+				<Checkbox filterGames={filterGames} filter={'PC'} text={'PC'} />
+				<Checkbox
+					filterGames={filterGames}
+					filter={'PS5'}
+					text={'Play Station 5'}
+				/>
+				<Checkbox
+					filterGames={filterGames}
+					filter={'PS4'}
+					text={'Play Station 4'}
+				/>
 			</StyledPlattSelector>
 		</StyledPlattformsSelectorDiv>
 	);
