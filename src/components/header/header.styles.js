@@ -12,6 +12,10 @@ const StyledHeader = styled.header`
 	background-color: ${COLORS.black};
 	border-radius: 1rem;
 	padding: 1.1875rem 2rem;
+
+	@media screen and (width>=768px) {
+		flex-direction: row;
+	}
 `;
 
 const StyledIcons = styled.div`
@@ -22,14 +26,26 @@ const StyledIcons = styled.div`
 
 const StyledHamburger = styled.img`
 	display: ${({ $show }) => ($show ? 'none' : 'block')};
+
+	@media screen and (width>=768px) {
+		display: none;
+	}
 `;
 
 const StyledCross = styled.img`
 	display: ${({ $show }) => ($show ? 'block' : 'none')};
+
+	@media screen and (width>=768px) {
+		display: none;
+	}
 `;
 
 const StyledNav = styled.nav`
 	display: ${({ $show }) => ($show ? 'block' : 'none')};
+
+	@media screen and (width>=768px) {
+		display: block;
+	}
 `;
 
 const StyledUl = styled.ul`
@@ -38,6 +54,13 @@ const StyledUl = styled.ul`
 	align-items: center;
 	margin-top: 1.5rem;
 	gap: 2rem;
+
+	@media screen and (width>=768px) {
+		flex-direction: row;
+		gap: 83px;
+		width: 500px;
+		justify-content: flex-end;
+	}
 `;
 
 const StyledNavLink = styled(NavLink)`
@@ -52,9 +75,6 @@ const StyledCounter = styled.div`
 	position: absolute;
 	top: ${({ $show }) => ($show ? '226px' : '0.8125rem')};
 	right: ${({ $show }) => ($show ? '4.5rem' : '0.875rem')};
-
-	/* top: 13px;
-	right: 14px; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -63,6 +83,11 @@ const StyledCounter = styled.div`
 	color: ${COLORS.pink};
 	background-color: ${COLORS.blue};
 	border-radius: 50%;
+
+	@media screen and (width>=768px) {
+		top: 60px;
+		right: 1rem;
+	}
 `;
 
 export {

@@ -44,4 +44,18 @@ const StyledToGameStore = styled(Link)`
 	border-radius: 1rem;
 `;
 
-export { StyledMain, StyledHeader, StyledTextBox, StyledUl, StyledToGameStore };
+const StyledBanner = styled.img`
+	@media screen and (width>=768px) {
+		max-width: 95%;
+		margin-inline: auto;
+	}
+`;
+
+export {
+	StyledMain,
+	StyledHeader,
+	StyledTextBox,
+	StyledUl,
+	StyledToGameStore,
+	StyledBanner
+};

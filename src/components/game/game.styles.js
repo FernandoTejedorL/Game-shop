@@ -11,6 +11,11 @@ const StyledGame = styled.div`
 	border-radius: 1rem;
 	padding: 1rem 0.625rem;
 	background-color: ${COLORS.backofcards};
+
+	@media screen and (width>=768px) {
+		width: 240px;
+		height: 407px;
+	}
 `;
 
 const StyledGameTitle = styled.span`

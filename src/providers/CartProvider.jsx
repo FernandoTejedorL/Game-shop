@@ -5,25 +5,36 @@ import { GAMES_INFO } from '../constants/games-info';
 const CartProvider = ({ children }) => {
 	const [filteredGames, setFilteredGames] = useState(GAMES_INFO);
 	const [selectedFilters, setSelectedFilters] = useState([]);
+	const [searchText, setSearchText] = useState('');
 
 	const filterGames = filter => {
-		let newFilters = [];
-		if (selectedFilters.includes(filter)) {
-			// primero comprueba para que al quitar el check lo saque de la nueva lista de filtros
-			newFilters = selectedFilters.filter(item => item !== filter);
-		} else {
-			//al marcar el check hace que entre al nuevo listado de filtros
-			newFilters = [...selectedFilters, filter];
-		}
-		setSelectedFilters(newFilters);
+		const newFilters = selectedFilters.includes(filter)
+			? selectedFilters.filter(item => item !== filter) // Quitar filtro del array de filtro por platafora
+			: [...selectedFilters, filter]; // Agregar filtro al array de filtro por plataforma
 
-		if (newFilters.length === 0) {
-			setFilteredGames(GAMES_INFO);
-		} else {
-			setFilteredGames(
-				GAMES_INFO.filter(game => newFilters.includes(game.plattform))
+		setSelectedFilters(newFilters);
+		applyFilters(newFilters, searchText);
+	};
+
+	const filterByText = text => {
+		setSearchText(text); // Actualizar el texto de búsqueda
+		applyFilters(selectedFilters, text);
+	};
+
+	const applyFilters = (filters, text) => {
+		let games = GAMES_INFO;
+
+		if (filters.length > 0) {
+			games = games.filter(game => filters.includes(game.plattform));
+		}
+
+		if (text) {
+			games = games.filter(game =>
+				game.title.toLowerCase().includes(text.toLowerCase())
 			);
 		}
+
+		setFilteredGames(games);
 	};
 
 	const [cart, setCart] = useState([]);
@@ -34,6 +45,7 @@ const CartProvider = ({ children }) => {
 	const deleteFromCart = id => {
 		setCart(cart.filter(item => item.id !== id));
 	};
+	console.log(cart);
 
 	return (
 		<CartContext.Provider
@@ -44,7 +56,8 @@ const CartProvider = ({ children }) => {
 				deleteFromCart,
 				filteredGames,
 				setFilteredGames,
-				filterGames
+				filterGames,
+				filterByText
 			}}
 		>
 			{children}

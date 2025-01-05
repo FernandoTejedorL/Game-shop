@@ -1,4 +1,5 @@
 import {
+	StyledBanner,
 	StyledHeader,
 	StyledMain,
 	StyledTextBox,
@@ -18,7 +19,7 @@ const Home = () => {
 					media='(min-width: 350px )'
 					srcSet='/assets/images/banner-mobile.jpg'
 				/>
-				<img src='/assets/images/banner-mobile.jpg' alt='banner' />
+				<StyledBanner src='/assets/images/banner-mobile.jpg' alt='banner' />
 			</picture>
 			<StyledTextBox>
 				<span>Welcome to GAMER SHOP</span>

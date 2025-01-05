@@ -11,6 +11,11 @@ const StyledGamestoreMain = styled.main`
 	background-color: ${COLORS.black};
 	margin-inline: 1.5rem;
 	border-radius: 1rem;
+
+	@media screen and (width>=768px) {
+		align-items: flex-start;
+		padding-inline: 2rem;
+	}
 `;
 
 const StyledHeader = styled.h2`
@@ -27,6 +32,12 @@ const StyledSearch = styled.div`
 	width: 269px;
 	border-radius: 1rem;
 	background-color: ${COLORS.background};
+
+	@media screen and (width>=768px) {
+		width: 100%;
+		justify-content: flex-start;
+		padding-inline: 2rem;
+	}
 `;
 
 const StyledTextInput = styled.input`
@@ -41,6 +52,22 @@ const StyledGamesContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 40px;
+
+	@media screen and (width>=768px) {
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 13px;
+	}
+`;
+
+const StyledFiltersAndGames = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	@media screen and (width>=768px) {
+		flex-direction: row;
+	}
 `;
 
 export {
@@ -48,5 +75,6 @@ export {
 	StyledHeader,
 	StyledSearch,
 	StyledTextInput,
-	StyledGamesContainer
+	StyledGamesContainer,
+	StyledFiltersAndGames
 };
