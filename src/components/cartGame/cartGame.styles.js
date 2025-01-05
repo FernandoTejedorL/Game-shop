@@ -18,6 +18,26 @@ const StyledCartGame = styled.div`
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
+		padding: 1rem 2rem;
+	}
+`;
+
+const StyledToBig = styled.div`
+	@media screen and (width>=768px) {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+	}
+`;
+
+const StyledAllToBig = styled.div`
+	@media screen and (width>=768px) {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: space-evenly;
 	}
 `;
 
@@ -43,6 +63,9 @@ const StyledBotOfCard = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	font-weight: ${FONT_WEIGHT.bold};
+
+	@media screen and (width>=768px) {
+	}
 `;
 
 const StyledExtraBuy = styled.button`
@@ -60,5 +83,7 @@ export {
 	StyledGCImage,
 	StyledTitleAndTrash,
 	StyledBotOfCard,
-	StyledExtraBuy
+	StyledExtraBuy,
+	StyledToBig,
+	StyledAllToBig
 };
