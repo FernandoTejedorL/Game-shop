@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import Checkbox from '../checkbox/Checkbox';
 import {
 	StyledChevron,
@@ -6,10 +6,8 @@ import {
 	StyledPlattformsSelectorDiv,
 	StyledPlattSelector
 } from './plattformsFilter.styles';
-import { CartContext } from '../../contexts/CartContext';
 
-const PlattformsFilter = () => {
-	const { filterGames } = useContext(CartContext);
+const PlattformsFilter = ({ filterGames }) => {
 	const [plattHidder, setPlattHidder] = useState(true);
 
 	return (
