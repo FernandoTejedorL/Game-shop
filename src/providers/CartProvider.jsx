@@ -4,6 +4,9 @@ import { GAMES_INFO } from '../constants/games-info';
 
 const CartProvider = ({ children }) => {
 	const [cart, setCart] = useState([]);
+	const [filteredGames, setFilteredGames] = useState(GAMES_INFO); // para que aparezcan todos los juegos el principio
+	const [selectedFilters, setSelectedFilters] = useState([]); // para ir metiendo los filtros de los checkbox
+	const [searchText, setSearchText] = useState(''); // para buscar por texto
 
 	const addToCart = game => {
 		setCart([...cart, game]);
@@ -11,10 +14,6 @@ const CartProvider = ({ children }) => {
 	const deleteFromCart = id => {
 		setCart(cart.filter(item => item.id !== id));
 	};
-
-	const [filteredGames, setFilteredGames] = useState(GAMES_INFO); // para que aparezcan todos los juegos el principio
-	const [selectedFilters, setSelectedFilters] = useState([]); // para ir metiendo los filtros de los checkbox
-	const [searchText, setSearchText] = useState(''); // para buscar por texto
 
 	const applyFilters = (filters, text) => {
 		let games = GAMES_INFO;
