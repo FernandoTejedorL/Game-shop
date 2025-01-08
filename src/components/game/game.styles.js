@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { COLORS } from '../../styles/colors';
 import { FONT_SIZE, FONT_WEIGHT } from '../../styles/fonts';
+import { Link } from 'react-router-dom';
 
 const StyledGame = styled.div`
 	display: flex;
@@ -45,7 +46,7 @@ const StyledInCartButton = styled.div`
 	justify-content: space-between;
 `;
 
-const StyledInCart = styled.span`
+const StyledInCart = styled(Link)`
 	width: 13.0625rem;
 	background-color: ${COLORS.pink};
 	display: flex;

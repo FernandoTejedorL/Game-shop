@@ -34,7 +34,8 @@ const Game = ({
 			)}
 			{isInCart && (
 				<StyledInCartButton>
-					<StyledInCart>In Cart</StyledInCart>
+					<StyledInCart to={'/checkout'}>In Cart</StyledInCart>
+
 					<img
 						onClick={() => actionDelete(id)}
 						src='/assets/images/trash.svg'

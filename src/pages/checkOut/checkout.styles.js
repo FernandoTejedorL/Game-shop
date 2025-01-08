@@ -44,11 +44,13 @@ const StyledCartContainer = styled.div`
 const StyledGiftContainer = styled.div`
 	@media screen and (width>=768px) {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
+		justify-content: center;
 		background-color: ${COLORS.backofcards};
 		padding: 2.125rem;
 		border-radius: 1rem;
-		width: 643px;
+		width: 100%;
 		margin-bottom: 1rem;
 	}
 `;
@@ -65,10 +67,9 @@ const StyledGiftText = styled.p`
 	margin-inline: 24px;
 	font-weight: ${FONT_WEIGHT.bold};
 	background-color: ${COLORS.backofcards};
-	width: 261px;
 	border-radius: 1rem;
 	text-align: center;
-	padding-block: 1rem;
+	padding: 1rem;
 `;
 
 const StyledSummary = styled.div`
@@ -81,7 +82,7 @@ const StyledSummary = styled.div`
 	padding: 1rem;
 
 	@media screen and (width>=768px) {
-		width: 643px;
+		width: 100%;
 	}
 `;
 
@@ -106,6 +107,10 @@ const StyledMainToBigBottom = styled.div`
 	flex-direction: column;
 	align-items: center;
 	gap: 1rem;
+
+	@media screen and (width>=768px) {
+		width: 50%;
+	}
 `;
 
 const StyledEmptyCartPic = styled.img`

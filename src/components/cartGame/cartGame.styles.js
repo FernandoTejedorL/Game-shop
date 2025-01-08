@@ -7,14 +7,12 @@ const StyledCartGame = styled.div`
 	flex-direction: column;
 	gap: 1rem;
 	width: 16.875rem;
-	height: 28.5625rem;
 	border-radius: 1rem;
 	padding: 1rem 0.625rem;
 	background-color: ${COLORS.backofcards};
 
 	@media screen and (width>=768px) {
-		width: 651px;
-		height: 252px;
+		width: 100%;
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
@@ -33,11 +31,10 @@ const StyledToBig = styled.div`
 
 const StyledAllToBig = styled.div`
 	@media screen and (width>=768px) {
-		width: 100%;
 		display: flex;
 		flex-direction: column;
-		height: 100%;
-		justify-content: space-evenly;
+		justify-content: space-between;
+		gap: 1.5rem;
 	}
 `;
 
@@ -65,6 +62,10 @@ const StyledBotOfCard = styled.div`
 	font-weight: ${FONT_WEIGHT.bold};
 
 	@media screen and (width>=768px) {
+		width: 100%;
+		height: 100%;
+		align-items: start;
+		flex-direction: column;
 	}
 `;
 
@@ -77,6 +78,8 @@ const StyledExtraBuy = styled.button`
 	color: ${COLORS.white};
 	border-radius: 1rem;
 	border: none;
+	width: 100%;
+	margin-top: 1rem;
 `;
 export {
 	StyledCartGame,
