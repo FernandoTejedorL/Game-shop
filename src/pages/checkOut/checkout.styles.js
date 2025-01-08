@@ -108,6 +108,17 @@ const StyledMainToBigBottom = styled.div`
 	gap: 1rem;
 `;
 
+const StyledEmptyCartPic = styled.img`
+	width: 90%;
+	height: 90%;
+	border-radius: 1rem;
+
+	@media screen and (width>=768px) {
+		width: 18.75rem;
+		height: 300px;
+	}
+`;
+
 export {
 	StyledMain,
 	StyledCartContainer,
@@ -118,5 +129,6 @@ export {
 	StyledOrderButton,
 	StyledMainToBig,
 	StyledMainToBigBottom,
-	StyledGiftContainer
+	StyledGiftContainer,
+	StyledEmptyCartPic
 };

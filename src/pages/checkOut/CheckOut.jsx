@@ -4,6 +4,7 @@ import CartGame from '../../components/cartGame/CartGame';
 import {
 	StyledCartContainer,
 	StyledEachPrice,
+	StyledEmptyCartPic,
 	StyledGiftContainer,
 	StyledGiftText,
 	StyledMain,
@@ -35,28 +36,38 @@ const CheckOut = () => {
 					))}
 				</StyledCartContainer>
 				<StyledMainToBigBottom>
-					<StyledGiftContainer>
-						<StylegGiftImg src='/assets/images/gift.png' alt='' />
-						<StyledGiftText>
-							With this purchase you earn a ${giftCard} gift card for your next
-							purchases.
-						</StyledGiftText>
-					</StyledGiftContainer>
-					<StyledSummary>
-						<StyledEachPrice>
-							<span>Subtotal</span>
-							<span>${totalNetPrice.toFixed(2)}</span>
-						</StyledEachPrice>
-						<StyledEachPrice>
-							<span>VAT</span>
-							<span>21%</span>
-						</StyledEachPrice>
-						<StyledEachPrice>
-							<span>Total</span>
-							<span>${finalPrice}</span>
-						</StyledEachPrice>
-						<StyledOrderButton>Order Items</StyledOrderButton>
-					</StyledSummary>
+					{cart.length !== 0 && (
+						<StyledGiftContainer>
+							<StylegGiftImg src='/assets/images/gift.png' alt='' />
+							<StyledGiftText>
+								With this purchase you earn a ${giftCard} gift card for your
+								next purchases.
+							</StyledGiftText>
+						</StyledGiftContainer>
+					)}
+					{cart.length !== 0 && (
+						<StyledSummary>
+							<StyledEachPrice>
+								<span>Subtotal</span>
+								<span>${totalNetPrice.toFixed(2)}</span>
+							</StyledEachPrice>
+							<StyledEachPrice>
+								<span>VAT</span>
+								<span>21%</span>
+							</StyledEachPrice>
+							<StyledEachPrice>
+								<span>Total</span>
+								<span>${finalPrice}</span>
+							</StyledEachPrice>
+							<StyledOrderButton>Order Items</StyledOrderButton>
+						</StyledSummary>
+					)}
+					{cart.length === 0 && (
+						<StyledEmptyCartPic
+							src='/assets/images/empty-cart.jpg'
+							alt='empty-cart'
+						/>
+					)}
 				</StyledMainToBigBottom>
 			</StyledMainToBig>
 		</StyledMain>
