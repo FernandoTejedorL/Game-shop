@@ -1,7 +1,7 @@
 # Game Shop
 
 <p>
-    <img src="" alt="home">
+    <img src="https://raw.githubusercontent.com/FernandoTejedorL/Game-shop/refs/heads/main/design/home.jpg" alt="home">
 </p>
 
 ## Live view
@@ -80,7 +80,9 @@ From concept to deployment, Game Shop is my first complete e-commerce project, w
 ## Capturas del proyecto
 
 <p>
-   <img src="" alt="home">
+   <img src="https://raw.githubusercontent.com/FernandoTejedorL/Game-shop/refs/heads/main/design/home.jpg" alt="home">
+       <img src="https://raw.githubusercontent.com/FernandoTejedorL/Game-shop/refs/heads/main/design/shop.jpg" alt="shop">
+       <img src="https://raw.githubusercontent.com/FernandoTejedorL/Game-shop/refs/heads/main/design/checkout.jpg" alt="checkout">
 </p>
 
 ## Author ✒️
