@@ -8,7 +8,7 @@
 
 <ul>
     <li>
-        <a target="_blank" href="">Game Shop</a>
+        <a target="_blank" href="https://game-shop-tizx.onrender.com">Game Shop</a>
     </li>
 </ul>
 
@@ -81,8 +81,8 @@ From concept to deployment, Game Shop is my first complete e-commerce project, w
 
 <p>
    <img src="https://raw.githubusercontent.com/FernandoTejedorL/Game-shop/refs/heads/main/design/home.jpg" alt="home">
-       <img src="https://raw.githubusercontent.com/FernandoTejedorL/Game-shop/refs/heads/main/design/shop.jpg" alt="shop">
-       <img src="https://raw.githubusercontent.com/FernandoTejedorL/Game-shop/refs/heads/main/design/checkout.jpg" alt="checkout">
+    <img src="https://raw.githubusercontent.com/FernandoTejedorL/Game-shop/refs/heads/main/design/shop.jpg" alt="shop">
+    <img src="https://raw.githubusercontent.com/FernandoTejedorL/Game-shop/refs/heads/main/design/checkout.jpg" alt="checkout">
 </p>
 
 ## Author ✒️
