@@ -22,7 +22,7 @@ Game Shop is the best place to find the new videogames releases for any of the b
 </br>
 🔍 Advanced Search – Filter games by platform and get platform suggestions when purchasing a new game
 
-## 🚀 What I Learned from Building Dusty Bunny
+## 🚀 What I Learned from Building Game Shop
 
 Throughout this project, I gained hands-on experience in developing and deploying a full-stack application to production using Render.
 
